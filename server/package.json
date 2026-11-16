@@ -1,0 +1,47 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "ElimuWrite API, analysis worker and migrations",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "migrate": "tsx src/migrate.ts",
+    "seed": "tsx seed/seed.ts",
+    "retention": "tsx src/jobs/retention-cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "worker": "tsx src/worker.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@citation-js/core": "^0.9.0",
+    "@citation-js/plugin-bibtex": "^0.9.0",
+    "@citation-js/plugin-csl": "^0.9.0",
+    "@citation-js/plugin-ris": "^0.9.0",
+    "@fastify/cookie": "^11.1.5",
+    "@fastify/multipart": "^10.1.9",
+    "@fastify/rate-limit": "^11.2.2",
+    "@fastify/static": "^10.1.11",
+    "docx": "^9.15.4",
+    "fastify": "^5.12.8",
+    "htmlparser2": "^12.0.0",
+    "mammoth": "^1.13.0",
+    "pdfjs-dist": "^6.5.438",
+    "pdfkit": "^0.20.2",
+    "pg": "^8.23.1",
+    "sanitize-html": "^2.18.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/pdfkit": "^0.17.7",
+    "@types/pg": "^8.23.1",
+    "@types/sanitize-html": "^2.16.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "type": "module"
+}
